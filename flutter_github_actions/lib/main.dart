@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_github_actions/checkin_test.dart';
+import 'package:flutter_github_actions/doc_test.dart';
+import 'package:flutter_github_actions/merge_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +13,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/checkin_test': (context) => CheckinTestPage(),
+        '/merge_test': (context) => MergeTestPage(),
+        '/doc_test': (context) => DocTestPage(),
+      },
     );
   }
 }
